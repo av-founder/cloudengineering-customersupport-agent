@@ -1,0 +1,248 @@
+{
+  "volume": {
+    "tickets_processed": 500,
+    "answered_automatically": 247,
+    "escalated": 253,
+    "blocked_by_guardrails": 29,
+    "routing_action_breakdown": {
+      "AUTO_REPLY": 247,
+      "BLOCK_SAFETY_GUARDRAIL_FAIL": 29,
+      "ESCALATE_LOW_CONFIDENCE": 8,
+      "ESCALATE_MANDATORY_INTENT": 111,
+      "ESCALATE_NO_GROUNDED_DOC": 105
+    }
+  },
+  "business": {
+    "first_contact_resolution_rate": 0.494,
+    "escalation_rate": 0.506,
+    "response_time_mean_ms": 725.9,
+    "response_time_median_ms": 876.5,
+    "response_time_mean_s": 0.726,
+    "response_time_median_s": 0.876
+  },
+  "technical": {
+    "classification_per_class_metrics": {
+      "account_access": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 22
+      },
+      "api_key_issue": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 18
+      },
+      "api_usage_question": {
+        "precision": 1.0,
+        "recall": 0.875,
+        "f1_score": 0.9333,
+        "support": 24
+      },
+      "authentication_failure": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 20
+      },
+      "billing_query": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 24
+      },
+      "compliance_request": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 26
+      },
+      "configuration_help": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 17
+      },
+      "data_export": {
+        "precision": 0.9062,
+        "recall": 1.0,
+        "f1_score": 0.9508,
+        "support": 29
+      },
+      "data_residency": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 29
+      },
+      "database_issue": {
+        "precision": 1.0,
+        "recall": 0.9615,
+        "f1_score": 0.9804,
+        "support": 26
+      },
+      "deployment_failure": {
+        "precision": 0.9643,
+        "recall": 1.0,
+        "f1_score": 0.9818,
+        "support": 27
+      },
+      "feature_request": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 20
+      },
+      "integration_help": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 21
+      },
+      "onboarding": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 22
+      },
+      "performance_degradation": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 23
+      },
+      "quota_or_overage": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 23
+      },
+      "rate_limit": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 13
+      },
+      "rollback_request": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 28
+      },
+      "security_incident": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 26
+      },
+      "sso_configuration": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 26
+      },
+      "unclear_request": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 15
+      },
+      "webhook_issue": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 21
+      }
+    },
+    "classification_macro_precision": 0.9941,
+    "classification_macro_recall": 0.9926,
+    "classification_accuracy": 0.992,
+    "retrieval_hit_rate": 0.6951,
+    "retrieval_hit_rate_all_answerable": 0.5938,
+    "latency_median_p50_ms": 876.5,
+    "latency_p95_ms": 1284.0,
+    "wall_clock_run_summary": {
+      "start_utc": "2026-11-16T06:23:12.555002+00:00",
+      "end_utc": "2026-11-16T06:30:21.105372+00:00",
+      "total_seconds": 428.55,
+      "setup_seconds": 33.64,
+      "rate_limit_backoff_seconds": 0.0,
+      "runtime_explanation": "500 tickets in 428.6s (0.79s per ticket after 33.6s of model loading/indexing) at concurrency 1; 0 live LLM calls, 2165 cache hits, 0 provider failovers, 0.0s rate-limit backoff."
+    }
+  },
+  "governance": {
+    "decisions_logged": 500,
+    "decision_log_coverage_rate": 1.0,
+    "guardrail_activations_by_type": {
+      "outbound_pii_or_secret_block": 0,
+      "nli_hallucination_entailment_block": 29,
+      "citation_integrity_block": 0,
+      "disclaimer_or_tone_block": 0
+    },
+    "private_data_detections": {
+      "ingest_redactions_total": 0,
+      "ingest_redactions_by_entity_type": {},
+      "outbound_blocked_detections_total": 0,
+      "outbound_leaked_occurrences": 0
+    }
+  },
+  "safety": {
+    "labeled_tickets": 500,
+    "must_not_auto_respond_violations": 0,
+    "expected_route_accuracy": 0.64,
+    "auto_resolution_precision": 0.7652,
+    "false_escalation_rate": 0.3923,
+    "label_implied_max_fcr": 0.622
+  },
+  "fairness": {
+    "cohorts": {
+      "fluent": {
+        "tickets": 380,
+        "fcr": 0.5026,
+        "intent_accuracy": 0.9921,
+        "retrieval_hit_rate": 0.5926,
+        "auto_resolution_precision": 0.7592,
+        "false_escalation_rate": 0.3723
+      },
+      "non_fluent": {
+        "tickets": 120,
+        "fcr": 0.4667,
+        "intent_accuracy": 0.9917,
+        "retrieval_hit_rate": 0.5977,
+        "auto_resolution_precision": 0.7857,
+        "false_escalation_rate": 0.45
+      }
+    },
+    "absolute_deltas": {
+      "fcr": 0.0359,
+      "intent_accuracy": 0.0004,
+      "retrieval_hit_rate": 0.0051,
+      "auto_resolution_precision": 0.0265,
+      "false_escalation_rate": 0.0777
+    },
+    "max_delta": 0.0777,
+    "fcr_two_proportion_z_test_p": 0.4921,
+    "fcr_delta_bootstrap_95ci": [
+      -0.0597,
+      0.1342
+    ]
+  },
+  "llm_usage": {
+    "calls": 2165,
+    "prompt_tokens": 3757907,
+    "completion_tokens": 261078,
+    "pipeline_errors": 0
+  },
+  "invariants": {
+    "processed_equals_answered_plus_escalated": true,
+    "full_audit_coverage": true
+  },
+  "run": {
+    "input_file": "development_tickets.json",
+    "total_input_records": 500,
+    "calibration_version": "cal_v1_2026_11",
+    "routing_mode": "FULL_AUTONOMOUS",
+    "llm_chain": "groq:openai/gpt-oss-120b -> openrouter:openai/gpt-oss-120b"
+  }
+}

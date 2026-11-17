@@ -1,0 +1,12 @@
+title = "CloudServe gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Synthetic test fixtures and the specification's documented example keys (no real credentials)"
+paths = [
+  '''tests/.*''',
+  '''scripts/smoke_api\.py''',
+  '''docs/architecture\.md''',
+]

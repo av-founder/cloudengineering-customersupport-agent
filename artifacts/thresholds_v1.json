@@ -1,0 +1,37 @@
+{
+  "calibration_version": "cal_v1_2026_11",
+  "fitted_timestamp_utc": "2026-11-16T05:38:23+00:00",
+  "dev_dataset_sha256": "5a0d8912238ee9fde07b4b793bda4672261fbf3ab965bf3eb418ef6e87f95d78",
+  "model_identifier_calibrated": "openai/gpt-oss-120b",
+  "platt_scaling": {
+    "temperature_T": 0.479792,
+    "slope_a": 0.870877,
+    "intercept_b": 0.294672
+  },
+  "routing_thresholds": {
+    "classification_confidence_min": 0.95,
+    "retrieval_relevance_min": 0.52,
+    "nli_entailment_min": 0.85,
+    "nli_contradiction_max": 0.25
+  },
+  "empirical_dev_metrics": {
+    "observed_ece": 0.0091,
+    "observed_intent_precision": 0.9839,
+    "observed_fcr_rate": 0.498,
+    "observed_escalation_rate": 0.502,
+    "observed_fluent_vs_non_fluent_delta": 0.08,
+    "observed_hallucination_rate": 0.249,
+    "hard_constraints_satisfied": false,
+    "observed_hallucination_rate_raw_labels": 0.261,
+    "label_denoising": "majority_vote_per_identical_text",
+    "relaxed_bounds": "{\"max_hallucination_rate\": 0.2535}",
+    "relaxed_bounds_met": true,
+    "fluent_vs_non_fluent_parity_ok": true,
+    "escalation_target_met": false,
+    "label_implied_max_fcr": 0.622,
+    "dev_tickets": 500,
+    "self_consistency_samples": 3,
+    "platt_fit_source": "fitted"
+  },
+  "tradeoff_justification_summary": "Selected tau_class=0.95, tau_ret=0.52 (bounds unattainable on the development labels were relaxed to best achievable + 2%: {'max_hallucination_rate': 0.2535}; the most conservative thresholds within 1% of the best FCR): FCR 49.8%, escalation 50.2%, intent precision 98.4%, wrong-answer rate 24.9%, max parity gap 0.080 (not significant: True). Alternatives: tau_ret 0.57 -> FCR 46.8%, intent precision 98.3%, wrong-answer rate 25.2%; tau_ret 0.50 -> FCR 50.0%, intent precision 98.4%, wrong-answer rate 25.2%; tau_class 0.90 -> FCR 50.2%, intent precision 98.4%, wrong-answer rate 25.5%. The wrong-answer rate barely moves with the thresholds (label-noise floor), so the selection keeps auto-answers high while preferring stricter thresholds. Extra escalations cost Tier-1 time, but wrong automated answers reach paying customers unread."
+}
